@@ -10,7 +10,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-01-13T17:48:06-0500",
+    date = "2025-01-13T19:07:06-0500",
     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.41.0.v20241217-1506, environment: Java 17.0.13 (Eclipse Adoptium)"
 )
 public class UserMapperImpl implements UserMapper {
@@ -26,6 +26,7 @@ public class UserMapperImpl implements UserMapper {
         user.setAdmin( dto.isAdmin() );
         user.setEmail( dto.getEmail() );
         user.setGender( dto.getGender() );
+        user.setImageUser( dto.getImageUser() );
         user.setLastnames( dto.getLastnames() );
         user.setName( dto.getName() );
         user.setPassword( dto.getPassword() );
