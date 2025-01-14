@@ -10,7 +10,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-01-13T19:07:06-0500",
+    date = "2025-01-13T23:09:01-0500",
     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.41.0.v20241217-1506, environment: Java 17.0.13 (Eclipse Adoptium)"
 )
 public class UserMapperImpl implements UserMapper {
@@ -23,19 +23,19 @@ public class UserMapperImpl implements UserMapper {
 
         User user = new User();
 
-        user.setAdmin( dto.isAdmin() );
-        user.setEmail( dto.getEmail() );
-        user.setGender( dto.getGender() );
-        user.setImageUser( dto.getImageUser() );
-        user.setLastnames( dto.getLastnames() );
         user.setName( dto.getName() );
-        user.setPassword( dto.getPassword() );
+        user.setImageUser( dto.getImageUser() );
+        user.setSecondName( dto.getSecondName() );
+        user.setLastnames( dto.getLastnames() );
         user.setPhoneNumber( dto.getPhoneNumber() );
+        user.setGender( dto.getGender() );
+        user.setEmail( dto.getEmail() );
+        user.setPassword( dto.getPassword() );
         List<Role> list = dto.getRoles();
         if ( list != null ) {
             user.setRoles( new ArrayList<Role>( list ) );
         }
-        user.setSecondName( dto.getSecondName() );
+        user.setAdmin( dto.isAdmin() );
 
         return user;
     }
@@ -46,13 +46,13 @@ public class UserMapperImpl implements UserMapper {
             return;
         }
 
-        user.setAdmin( dto.isAdmin() );
-        user.setEmail( dto.getEmail() );
-        user.setGender( dto.getGender() );
-        user.setLastnames( dto.getLastnames() );
         user.setName( dto.getName() );
-        user.setPassword( dto.getPassword() );
-        user.setPhoneNumber( dto.getPhoneNumber() );
         user.setSecondName( dto.getSecondName() );
+        user.setLastnames( dto.getLastnames() );
+        user.setPhoneNumber( dto.getPhoneNumber() );
+        user.setGender( dto.getGender() );
+        user.setEmail( dto.getEmail() );
+        user.setPassword( dto.getPassword() );
+        user.setAdmin( dto.isAdmin() );
     }
 }
